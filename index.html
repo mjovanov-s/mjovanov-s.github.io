@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="哈哈镜鸭脖官方首页。提供正宗川味麻辣鸭脖、卤味零食、特产礼盒的在线选购。了解品牌故事、产品分类、优惠活动及食用指南。">
+    <meta name="keywords" content="哈哈镜鸭脖,鸭脖,麻辣鸭脖,卤味零食,特产食品,美食">
+    <title>哈哈镜鸭脖-正宗川味卤味零食与特产选购平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #ff6f61;
+            --accent-color: #ffeb3b;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-outline {
+            padding: 8px 20px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f0 0%, #fff 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background-color: rgba(211, 47, 47, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Product Grid */
+        .products {
+            padding: 60px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent-color);
+            color: #d32f2f;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .product-img {
+            height: 200px;
+            width: 100%;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .price small {
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Consumption Guide */
+        .guide {
+            padding: 60px 0;
+        }
+
+        .guide-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .guide-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .guide-list {
+            margin-top: 30px;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .guide-num {
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .guide-text h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .guide-text p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .guide-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-gray);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+                哈哈镜<span>鸭脖</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#products">热门产品</a></li>
+                    <li><a href="#about">品牌故事</a></li>
+                    <li><a href="#guide">食用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline">登录</a>
+                <a href="#" class="btn-primary">立即选购</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-tags">
+                    <span class="tag">正宗川味</span>
+                    <span class="tag">秘制配方</span>
+                    <span class="tag">0添加防腐剂</span>
+                </div>
+                <h1>越啃越有味，解馋更过瘾</h1>
+                <p>哈哈镜鸭脖，传承百年卤味技艺，精选优质鸭源，独家秘制香料配方。麻辣鲜香，回味无穷，是您追剧、聚会、加班的必备休闲零食。</p>
+                <div style="display: flex; justify-content: center; gap: 15px;">
+                    <a href="#products" class="btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">探索产品</a>
+                    <a href="#guide" class="btn-outline" style="padding: 12px 30px; font-size: 1.1rem;">查看食谱</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🦆</div>
+                        <h3>精选原料</h3>
+                        <p>严选散养健康鸭脖，肉质紧实，无淋巴，无注水，从源头保证食品安全。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌶️</div>
+                        <h3>秘制卤汤</h3>
+                        <p>数十种天然草本香料熬制卤汤，慢火入味，辣而不燥，麻而不苦。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <h3>极速发货</h3>
+                        <p>冷链包装，现做现发，确保您收到的每一根鸭脖都保持最佳口感。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热销爆款</h2>
+                    <p>点击下方商品了解更多详情与优惠</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <span class="badge">爆款</span>
+                        <img src="https://picsum.photos/seed/duck1/400/300" alt="麻辣鸭脖" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">经典麻辣鸭脖 300g</h3>
+                            <p class="product-desc">川味十足，香辣过瘾，适合喜欢重口味的食客。</p>
+                            <div class="product-meta">
+                                <div class="price">¥38.00</div>
+                                <a href="#" class="btn-primary" style="padding: 6px 15px; font-size: 0.9rem;">购买</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <span class="badge">新品</span>
+                        <img src="https://picsum.photos/seed/duck2/400/300" alt="甜辣鸭脖" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">甜辣香酥鸭脖 300g</h3>
+                            <p class="product-desc">甜辣适中，外酥里嫩，老少皆宜的家庭休闲零食。</p>
+                            <div class="product-meta">
+                                <div class="price">¥42.00</div>
+                                <a href="#" class="btn-primary" style="padding: 6px 15px; font-size: 0.9rem;">购买</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/duck3/400/300" alt="五香鸭脖" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">五香原味鸭脖 300g</h3>
+                            <p class="product-desc">原汁原味，卤香浓郁，不辣选择，越啃越香。</p>
+                            <div class="product-meta">
+                                <div class="price">¥35.00</div>
+                                <a href="#" class="btn-primary" style="padding: 6px 15px; font-size: 0.9rem;">购买</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <span class="badge">礼盒</span>
+                        <img src="https://picsum.photos/seed/duck4/400/300" alt="鸭脖大礼包" class="product-img">
+                        <div class="product-info">
+                            <h3 class="product-name">节日送礼大礼包 1kg</h3>
+                            <p class="product-desc">多种口味组合，精美包装，送礼体面，送健康。</p>
+                            <div class="product-meta">
+                                <div class="price">¥128.00</div>
+                                <a href="#" class="btn-primary" style="padding: 6px 15px; font-size: 0.9rem;">购买</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumption Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <div class="section-title">
+                    <h2>食用指南与搭配建议</h2>
+                    <p>如何让美味的鸭脖体验更上一层楼？</p>
+                </div>
+                <div class="guide-container">
+                    <div class="guide-content">
+                        <div class="guide-list">
+                            <div class="guide-item">
+                                <div class="guide-num">1</div>
+                                <div class="guide-text">
+                                    <h4>开袋即食，口感最佳</h4>
+                                    <p>哈哈镜鸭脖采用真空锁鲜包装，开袋后建议直接食用，此时鸭脖的卤味最浓，口感最鲜嫩。</p>
+                                </div>
+                            </div>
+                            <div class="guide-item">
+                                <div class="guide-num">2</div>
+                                <div class="guide-text">
+                                    <h4>搭配碳酸饮料解腻</h4>
+                                    <p>麻辣口味较为重口，建议搭配冰镇可乐、雪碧或啤酒，碳酸气泡能有效中和油腻感。</p>
+                                </div>
+                            </div>
+                            <div class="guide-item">
+                                <div class="guide-num">3</div>
+                                <div class="guide-text">
+                                    <h4>加热后风味更佳</h4>
+                                    <p>如果您喜欢热食，可以将鸭脖放入蒸锅蒸5-8分钟，热吃更能激发香料的香气。</p>
+                                </div>
+                            </div>
+                            <div class="guide-item">
+                                <div class="guide-num">4</div>
+                                <div class="guide-text">
+                                    <h4>作为下酒菜首选</h4>
+                                    <p>鸭脖肉质紧实，越啃越有味，是绝佳的佐酒小菜，无论是朋友聚会还是独自小酌都很合适。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/foodsetup/600/400" alt="鸭脖美食搭配展示">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">你们家的鸭脖辣度如何？适合不能吃辣的人吗？</div>
+                        <div class="faq-answer">
+                            我们提供经典麻辣、甜辣、五香等多种口味。经典麻辣属于川味重辣，适合无辣不欢的人群；甜辣口味适中；五香原味完全不辣，老少皆宜。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">保质期是多久？需要冷藏保存吗？</div>
+                        <div class="faq-answer">
+                            产品保质期为90天（常温）。未拆封的真空包装请放置在阴凉干燥处保存；拆封后建议密封放入冰箱冷藏，并尽快食用完毕。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">发货需要多长时间？支持哪些地区？</div>
+                        <div class="faq-answer">
+                            我们通常在24小时内发货。全国大部分地区支持包邮，偏远地区可能会有少量运费，具体以结算页面为准。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以开发票吗？</div>
+                        <div class="faq-answer">
+                            支持。购买成功后，您可以在个人中心申请开具电子发票，发票类型为增值税普通发票。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>哈哈镜鸭脖</h3>
+                    <p>专注川味卤味零食研发与生产，致力于为每一位消费者提供健康、美味、放心的休闲食品。从农场到餐桌，我们严格把控每一个环节。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#products">全部产品</a></li>
+                        <li><a href="#guide">食用指南</a></li>
+                        <li><a href="#">会员中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">配送说明</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 哈哈镜鸭脖 版权所有 | 本页面仅为演示设计</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
