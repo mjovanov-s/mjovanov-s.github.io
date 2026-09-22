@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="返乡人员定义最新政策解读，包括返乡条件、疫情防控要求、交通出行指南及各地返乡政策查询。了解最新国家及地方关于返乡人员的具体规定。">
+    <meta name="keywords" content="返乡人员定义,返乡政策,返乡条件,疫情防控,春运">
+    <title>返乡人员定义-最新返乡政策解读与出行指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #3182ce;
+            --accent-color: #e53e3e;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-main: #2d3748;
+            --text-secondary: #718096;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Main Content */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Definition Box */
+        .definition-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .definition-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .definition-text {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #bee3f8;
+            color: #2c5282;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* List Styles */
+        .info-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: box-shadow 0.2s;
+        }
+
+        .info-item:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-box {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #edf2f7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #4a5568;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .icon-box {
+                width: 100%;
+                height: 40px;
+                border-radius: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                政策通
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">政策解读</a></li>
+                    <li><a href="#">各地规定</a></li>
+                    <li><a href="#">出行指南</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-btn">立即查询</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>返乡人员定义</h1>
+            <p>了解最新国家及地方关于返乡人员的具体范围、定义及疫情防控相关要求，助您顺利返乡。</p>
+        </section>
+
+        <div class="container">
+            <div class="content-area">
+                <!-- 核心定义 -->
+                <article>
+                    <div class="section-title">
+                        <span>核心定义与范围</span>
+                    </div>
+                    <div class="definition-box">
+                        <h3>什么是返乡人员？</h3>
+                        <p class="definition-text">根据国务院联防联控机制综合组《关于做好人民群众就地过年服务保障工作的通知》（国办发明电〔2021〕1号）精神，返乡人员是指：<strong>从外地（非本地）返回农村地区的人员</strong>，主要指三类人员：</p>
+                        <div class="tags">
+                            <span class="tag">跨省流动返乡人员</span>
+                            <span class="tag">省内流动返乡人员</span>
+                            <span class="tag">重点地区来乡人员</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem; color: var(--text-main);">具体包含内容</h3>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <div class="icon-box">1</div>
+                            <div class="item-content">
+                                <h4>跨省流动返乡人员</h4>
+                                <p>从内地城市跨省（含自治区、直辖市）流动到农村地区的人员。无论是否持有核酸检测证明，到达农村后均需进行核酸检测。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">2</div>
+                            <div class="item-content">
+                                <h4>省内流动返乡人员</h4>
+                                <p>从中高风险地区所在省份（包括直辖市）流动到农村地区的人员。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">3</div>
+                            <div class="item-content">
+                                <h4>进口冷链食品从业人员</h4>
+                                <p>直接接触进口冷链食品的从业人员。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">4</div>
+                            <div class="item-content">
+                                <h4>口岸接触入境人员人员</h4>
+                                <p>直接接触从国外入境人员的人员。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">5</div>
+                            <div class="item-content">
+                                <h4>交通运输工具从业人员</h4>
+                                <p>交通一线工作人员，如飞机、铁路、公路、水路等交通运输从业人员。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">6</div>
+                            <div class="item-content">
+                                <h4>农贸市场工作人员</h4>
+                                <p>农产品批发市场、农贸市场工作人员。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- 通行要求 -->
+                <article>
+                    <div class="section-title">
+                        <span>返乡通行要求</span>
+                    </div>
+                    <div class="definition-box" style="background-color: #fff5f5; border-left-color: var(--accent-color);">
+                        <h3 style="color: var(--accent-color);">核酸检测要求</h3>
+                        <p class="definition-text">上述返乡人员到达农村后，需持有 <strong>7天内</strong> 的核酸检测阴性证明才能返乡。</p>
+                        <p class="definition-text">返乡后，所在村（社区）要立即向县级防控机制报到，并纳入网格管理。</p>
+                    </div>
+                    
+                    <h3 style="margin-bottom: 1rem; color: var(--text-main);">出行建议</h3>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <div class="icon-box">🚗</div>
+                            <div class="item-content">
+                                <h4>提前报备</h4>
+                                <p>返乡前请务必向目的地村委会或社区提前报备个人信息，包括行程、返程时间及健康状况。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">💉</div>
+                            <div class="item-content">
+                                <h4>健康码查验</h4>
+                                <p>在交通卡口、社区入口等场所，需配合工作人员查验健康码、行程卡及核酸检测证明。</p>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <div class="icon-box">🧴</div>
+                            <div class="item-content">
+                                <h4>自我防护</h4>
+                                <p>返乡途中及返乡后，请继续做好个人健康监测，减少聚集性活动。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- 侧边栏 -->
+            <aside>
+                <div class="sidebar-card">
+                    <h3>返乡准备清单</h3>
+                    <ul class="checklist">
+                        <li>确认出发地及目的地风险等级</li>
+                        <li>提前申请当地健康码/行程码</li>
+                        <li>准备7天内核酸检测阴性证明</li>
+                        <li>准备口罩、消毒湿巾等防护用品</li>
+                        <li>购买返乡意外保险（可选）</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>常见问题 (FAQ)</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">外地农村户籍人员返乡需要隔离吗？</div>
+                        <div class="faq-answer">主要取决于目的地所在省份及所在地的具体防疫政策。一般持有7天内核酸阴性证明可正常返乡，但部分中高风险地区周边区域可能仍有管控要求。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">只有核酸检测证明够吗？</div>
+                        <div class="faq-answer">对于跨省返乡人员，通常需要提供7天内核酸检测阴性证明。部分地区可能还要求提供抗原检测证明或落地进行核酸检测。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">返乡后多久做一次核酸检测？</div>
+                        <div class="faq-answer">具体频次由各地防控指挥部规定，通常建议返乡后第一时间（落地检）以及后续根据当地要求进行定期检测。</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>最新动态</h3>
+                    <ul class="checklist" style="font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.5rem; color: var(--text-main);">• 各地返乡政策陆续发布中...</li>
+                        <li style="margin-bottom: 0.5rem; color: var(--text-main);">• 春运期间交通出行注意事项...</li>
+                        <li style="margin-bottom: 0.5rem; color: var(--text-main);">• 农村地区疫情防控指南更新...</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">政策通致力于提供最新、最权威的全国政策信息查询服务，帮助公众及时了解各类政策动态。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">政策法规</a></li>
+                    <li><a href="#">便民服务</a></li>
+                    <li><a href="#">各地政策</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关链接</h4>
+                <ul>
+                    <li><a href="#">国家卫健委</a></li>
+                    <li><a href="#">国务院客户端</a></li>
+                    <li><a href="#">疾控中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 政策通服务平台 版权所有 | 本页面信息仅供参考，具体政策请以当地官方发布为准。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
