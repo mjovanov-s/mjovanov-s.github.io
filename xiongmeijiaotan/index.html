@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄妹焦谈 - 亲密关系中的沟通艺术与心理疏导指南</title>
+    <meta name="description" content="提供关于兄妹关系的深度沟通指南、心理疏导技巧、相处模式分析与情感咨询建议，帮助解决家庭矛盾，建立更健康的兄妹互动模式。">
+    <meta name="keywords" content="兄妹焦谈,兄妹关系,家庭沟通,心理疏导,手足相处,兄妹矛盾">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #F5A623;
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #357ABD;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #1a202c;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(74, 144, 226, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 160px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .problem-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .problem-list h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .problem-list p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .problem-list a {
+            font-size: 12px;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-light);
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: var(--container-width);
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-tags {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            兄妹焦谈
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">情感指南</a>
+            <a href="#">矛盾调解</a>
+            <a href="#">成长故事</a>
+            <a href="#">专家咨询</a>
+        </nav>
+        <a href="#" class="cta-button">立即咨询</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>打破沉默，重塑亲密：关于兄妹关系的深度对话指南</h1>
+            <div class="hero-tags">
+                <span class="tag">手足情深</span>
+                <span class="tag">沟通技巧</span>
+                <span class="tag">心理疏导</span>
+                <span class="tag">家庭和谐</span>
+            </div>
+            <p>我们提供专业的兄妹关系分析、矛盾调解方案以及情感沟通技巧，帮助您化解隔阂，找回手足间的温暖与默契。</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- Featured Articles -->
+            <section>
+                <div class="section-title">
+                    <span>热门话题</span>
+                    <a href="#" style="font-size: 14px; color: var(--primary-color);">查看更多 &rarr;</a>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-img-placeholder">
+                            <img src="https://picsum.photos/seed/sibling1/400/250" alt="兄妹关系沟通图片">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">情感指南</span>
+                            <h3 class="card-title">如何与性格迥异的兄妹建立深层沟通？</h3>
+                            <p class="card-desc">面对性格差异巨大的手足，单纯的“讲道理”往往无效。本文将介绍非暴力沟通在兄妹关系中的应用。</p>
+                            <div class="card-meta">
+                                <span>阅读 2.4k</span>
+                                <span>2023-10-24</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-placeholder">
+                            <img src="https://picsum.photos/seed/sibling2/400/250" alt="家庭聚会">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">矛盾调解</span>
+                            <h3 class="card-title">处理“嫉妒心理”：当兄弟姐妹感到被忽视</h3>
+                            <p class="card-desc">很多成年兄妹之间潜藏着竞争意识。了解这种心理背后的成因，是修复关系的第一步。</p>
+                            <div class="card-meta">
+                                <span>阅读 1.8k</span>
+                                <span>2023-10-22</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img-placeholder">
+                            <img src="https://picsum.photos/seed/sibling3/400/250" alt="共同成长">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag">成长故事</span>
+                            <h3 class="card-title">从争吵到依赖：一个兄弟共同创业的真实经历</h3>
+                            <p class="card-desc">分享一对从无话不谈到互相扶持的兄弟，在职场与生活中如何互相成就的故事。</p>
+                            <div class="card-meta">
+                                <span>阅读 3.1k</span>
+                                <span>2023-10-20</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Deep Dive: Psychology & Communication -->
+            <section>
+                <div class="section-title">
+                    <span>深度解析</span>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 12px; border-left: 5px solid var(--primary-color);">
+                    <h3 style="font-size: 20px; margin-bottom: 15px;">手足关系对人格形成的影响</h3>
+                    <p style="margin-bottom: 15px; color: #555;">
+                        心理学家指出，兄弟姐妹是孩子进入社会的第一个“微缩环境”。在这个环境中，孩子学习分享、竞争、合作以及解决冲突。一个健康的兄妹关系，能够赋予孩子更强的社会适应能力和同理心。
+                    </p>
+                    <p style="color: #555;">
+                        然而，并非所有兄妹关系都是完美的。随着年龄增长，学业压力、职业选择、婚恋观念的差异，往往会成为新的摩擦点。<strong>“兄妹焦谈”</strong>致力于提供科学视角的解读，帮助您跳出情绪，理性看待问题。
+                    </p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-title">
+                    <span>常见问题解答 (FAQ)</span>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 兄妹之间成年后经常吵架，是不是关系破裂了？</div>
+                    <div class="faq-answer">A: 成年后的争吵往往源于边界感的模糊或生活压力的转移，并不代表关系破裂。只要双方仍有意愿沟通，很多矛盾都是可以通过调整相处模式来化解的。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何在不引起家庭矛盾的情况下，处理金钱往来？</div>
+                    <div class="faq-answer">A: 建议制定明确的规则，如“亲兄弟明算账”，并尽量在双方都有经济能力时避免大额借贷。必要时，可以引入第三方（如父母）作为调解人。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: 对方总是拿我的过去说事，我该如何回应？</div>
+                    <div class="faq-answer">A: 坚定地表达你的感受：“我知道你是在开玩笑，但这样让我感到不舒服。”同时，如果涉及原则性问题，应严肃指出并停止讨论。</div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">典型问题库</h3>
+                <ul class="problem-list">
+                    <li>
+                        <h4>哥哥总是打压我怎么办？</h4>
+                        <p>关于自信建立与应对言语攻击的建议。</p>
+                        <a href="#">查看解决方案 &rarr;</a>
+                    </li>
+                    <li>
+                        <h4>妹妹抢我的东西，父母却不管？</h4>
+                        <p>探讨家庭资源分配不均与父母偏心问题。</p>
+                        <a href="#">查看解决方案 &rarr;</a>
+                    </li>
+                    <li>
+                        <h4>结婚后如何平衡小家庭与大家庭？</h4>
+                        <p>处理姻亲关系与原生家庭界限的指南。</p>
+                        <a href="#">查看解决方案 &rarr;</a>
+                    </li>
+                    <li>
+                        <h4>异地兄妹如何保持亲密？</h4>
+                        <p>利用现代工具维持长期关系的技巧。</p>
+                        <a href="#">查看解决方案 &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget" style="background-color: var(--primary-color); color: white;">
+                <h3 class="sidebar-title" style="border-left-color: white;">需要专业帮助？</h3>
+                <p style="font-size: 14px; margin-bottom: 20px; opacity: 0.9;">面对复杂的家庭纠葛，有时候我们需要一个客观的第三方视角。</p>
+                <button class="cta-button" style="background: white; color: var(--primary-color); width: 100%; border: none;">预约心理测评</button>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>关于兄妹焦谈</h3>
+            <p style="font-size: 14px; line-height: 1.6; opacity: 0.8;">
+                我们专注于为用户提供关于手足关系的深度咨询与沟通指导。通过心理学知识与生活案例，帮助每一个家庭找回温暖。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>快速导航</h3>
+            <ul>
+                <li><a href="#">情感指南</a></li>
+                <li><a href="#">矛盾调解</a></li>
+                <li><a href="#">成长故事</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>帮助中心</h3>
+            <ul>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 兄妹焦谈. All Rights Reserved. 仅供学习与交流使用，不构成专业医疗或法律建议。</p>
+    </div>
+</footer>
+
+</body>
+  </html>
