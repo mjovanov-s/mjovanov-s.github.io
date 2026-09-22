@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="波乐 - 专注于高品质音乐与音频内容的在线聚合平台，提供无损音质下载、在线收听及个性化音乐推荐服务。">
+    <meta name="keywords" content="波乐,音乐下载,在线听歌,无损音乐,音频聚合">
+    <title>波乐 - 高品质音乐聚合与无损下载平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #00cec9;
+            --dark-bg: #2d3436;
+            --light-bg: #f5f6fa;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --card-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--dark-bg);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--dark-bg);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5649c0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            outline: none;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .category-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--card-radius);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            background: #f8f9ff;
+        }
+
+        .category-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .category-item span {
+            display: block;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .category-item small {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        /* Hot Songs List */
+        .song-list {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+
+        .song-item:last-child {
+            border-bottom: none;
+        }
+
+        .song-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .song-index {
+            width: 30px;
+            font-weight: bold;
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .song-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .song-title {
+            font-weight: 600;
+            color: var(--text-main);
+            display: block;
+        }
+
+        .song-artist {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .song-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .song-action {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .icon-btn:hover {
+            background-color: #eee;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-container { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .song-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .song-meta { margin-top: 10px; }
+            .song-action { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">波乐 <span>BoLe</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#category">分类</a></li>
+                    <li><a href="#hot">热门榜单</a></li>
+                    <li><a href="#vip">会员专区</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>发现音乐，享受波乐</h1>
+                <p>汇聚全网海量高品质音频资源，支持无损下载与在线收听，为您打造极致的听觉体验。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索歌曲、歌手、专辑...">
+                    <button aria-label="搜索">🔍</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <div class="container">
+            <section class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>海量曲库</h3>
+                    <p>收录超过千万首歌曲，涵盖流行、摇滚、古典、电子等多种风格。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>无损音质</h3>
+                    <p>FLAC、WAV 等无损格式支持，还原录音室级音质，细节尽在掌握。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>极速下载</h3>
+                    <p>智能 CDN 加速，高速下载通道，让您的音乐下载体验如飞般流畅。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>智能推荐</h3>
+                    <p>基于 AI 算法，根据您的听歌习惯，精准推荐您可能喜欢的音乐。</p>
+                </article>
+            </section>
+        </div>
+
+        <!-- Categories -->
+        <section id="category" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>音乐分类</h2>
+                    <p>探索不同风格的音乐世界，满足您的多样化听觉需求。</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music1/100/100" alt="流行音乐">
+                        <span>流行音乐</span>
+                        <small>Pop</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music2/100/100" alt="摇滚">
+                        <span>摇滚</span>
+                        <small>Rock</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music3/100/100" alt="电子">
+                        <span>电子</span>
+                        <small>Electronic</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music4/100/100" alt="轻音乐">
+                        <span>轻音乐</span>
+                        <small>Easy Listening</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music5/100/100" alt="民谣">
+                        <span>民谣</span>
+                        <small>Folk</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music6/100/100" alt="爵士">
+                        <span>爵士</span>
+                        <small>Jazz</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music7/100/100" alt="古典">
+                        <span>古典</span>
+                        <small>Classic</small>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/music8/100/100" alt="说唱">
+                        <span>说唱</span>
+                        <small>Hip-Hop</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Songs List -->
+        <section id="hot" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>本周热门推荐</h2>
+                    <p>根据全网播放数据实时更新，感受当下最流行的旋律。</p>
+                </div>
+                <div class="song-list">
+                    <article class="song-item">
+                        <span class="song-index">1</span>
+                        <div class="song-info">
+                            <span class="song-title">星际漫游</span>
+                            <span class="song-artist">Unknown Artist</span>
+                        </div>
+                        <div class="song-meta">
+                            <span>3:45</span>
+                            <span>FLAC</span>
+                            <span>2.5M 播放</span>
+                        </div>
+                        <div class="song-action">
+                            <button class="icon-btn" title="播放">▶</button>
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </article>
+                    <article class="song-item">
+                        <span class="song-index">2</span>
+                        <div class="song-info">
+                            <span class="song-title">夏日微风</span>
+                            <span class="song-artist">Summer Vibes</span>
+                        </div>
+                        <div class="song-meta">
+                            <span>4:12</span>
+                            <span>MP3 320K</span>
+                            <span>1.8M 播放</span>
+                        </div>
+                        <div class="song-action">
+                            <button class="icon-btn" title="播放">▶</button>
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </article>
+                    <article class="song-item">
+                        <span class="song-index">3</span>
+                        <div class="song-info">
+                            <span class="song-title">城市霓虹</span>
+                            <span class="song-artist">Neon Lights</span>
+                        </div>
+                        <div class="song-meta">
+                            <span>3:55</span>
+                            <span>FLAC</span>
+                            <span>1.5M 播放</span>
+                        </div>
+                        <div class="song-action">
+                            <button class="icon-btn" title="播放">▶</button>
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </article>
+                    <article class="song-item">
+                        <span class="song-index">4</span>
+                        <div class="song-info">
+                            <span class="song-title">深海回响</span>
+                            <span class="song-artist">Deep Blue</span>
+                        </div>
+                        <div class="song-meta">
+                            <span>5:20</span>
+                            <span>MP3 320K</span>
+                            <span>1.2M 播放</span>
+                        </div>
+                        <div class="song-action">
+                            <button class="icon-btn" title="播放">▶</button>
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </article>
+                    <article class="song-item">
+                        <span class="song-index">5</span>
+                        <div class="song-info">
+                            <span class="song-title">晨曦之光</span>
+                            <span class="song-artist">Morning Light</span>
+                        </div>
+                        <div class="song-meta">
+                            <span>3:30</span>
+                            <span>FLAC</span>
+                            <span>980K 播放</span>
+                        </div>
+                        <div class="song-action">
+                            <button class="icon-btn" title="播放">▶</button>
+                            <button class="icon-btn" title="收藏">♥</button>
+                            <button class="icon-btn" title="下载">⬇</button>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-outline">查看更多榜单</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ / Info Section -->
+        <section class="section" style="background-color: white;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>关于波乐</h2>
+                    <p>我们致力于提供最纯粹的数字音乐服务。</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    <article style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 波乐提供什么格式的音乐？</h3>
+                        <p style="color: var(--text-light);">波乐平台支持 MP3 (320Kbps)、FLAC 及 WAV 等多种格式。普通用户可免费下载 MP3 格式，VIP 会员可解锁无损音质下载权限。</p>
+                    </article>
+                    <article style="margin-bottom: 20px;">
+                        <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 如何成为波乐会员？</h3>
+                        <p style="color: var(--text-light);">您可以通过点击页面右上角的“注册”按钮创建账户，或直接购买月度/年度会员套餐。会员期间可享受无限次无损下载及去广告服务。</p>
+                    </article>
+                    <article>
+                        <h3 style="margin-bottom: 10px; color: var(--primary-color);">Q: 下载的音乐版权如何？</h3>
+                        <p style="color: var(--text-light);">波乐平台上的所有资源均经过版权方授权，或来自用户上传的公有领域内容。请尊重知识产权，仅供个人试听和收藏使用。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>波乐 BoLe</h4>
+                    <p style="color: #b2bec3; font-size: 0.9rem; line-height: 1.8;">
+                        波乐是一个专注于高品质音乐聚合的在线服务平台。我们汇聚全球好音乐，致力于为用户提供便捷、高效、无损的数字音乐体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">合作洽谈</a></li>
+                        <li><a href="#">侵权举报</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">商务合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">网易云音乐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 波乐 BoLe Music. All Rights Reserved. 仅供演示用途，非真实网站。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
