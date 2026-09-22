@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="胡萝卜炖羊肉的做法大全，包含详细的家常做法、烹饪步骤、食材搭配技巧及营养价值分析。为您提供最正宗的胡萝卜炖羊肉食谱与烹饪指南。">
+    <meta name="keywords" content="胡萝卜炖羊肉, 羊肉做法, 冬季进补食谱, 胡萝卜羊肉汤, 家常菜谱">
+    <title>胡萝卜炖羊肉-家常羊肉做法与冬季进补食谱指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #e67e22;
+            --text-main: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --border-color: #ecf0f1;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #fff3e0 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(211, 84, 0, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Featured Recipe */
+        .recipe-hero {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .recipe-hero img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .recipe-hero-body {
+            padding: 2rem;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .recipe-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Steps */
+        .steps-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .step-item:nth-child(n+1) .step-number {
+            content: counter(step);
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Ingredients Sidebar */
+        aside {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ingredient-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ingredient-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-list span {
+            color: var(--text-light);
+        }
+
+        .tips-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #795548;
+        }
+
+        /* Nutrition Section */
+        .nutrition-section {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .nutrition-item {
+            text-align: center;
+            padding: 1rem;
+            background: #fafafa;
+            border-radius: var(--radius);
+        }
+
+        .nutrition-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nutrition-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #34495e;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .recipe-hero img {
+                height: 250px;
+            }
+
+            .step-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .step-number {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>家常食谱</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">胡萝卜炖羊肉</a></li>
+                    <li><a href="#">冬季进补</a></li>
+                    <li><a href="#">羊肉食谱</a></li>
+                    <li><a href="#">食材搭配</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>胡萝卜炖羊肉</h1>
+            <p>一道经典的冬季滋补菜肴，羊肉温补暖身，胡萝卜富含胡萝卜素，两者搭配营养丰富，口感软烂，是秋冬季节的最佳选择。</p>
+            <div class="hero-tags">
+                <span class="tag">温补暖身</span>
+                <span class="tag">冬季食谱</span>
+                <span class="tag">营养均衡</span>
+                <span class="tag">家常菜</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <article class="recipe-hero">
+                <img src="https://picsum.photos/seed/carrotlamb/800/400" alt="胡萝卜炖羊肉成品图">
+                <div class="recipe-hero-body">
+                    <div class="recipe-meta">
+                        <span>⏱️ 约 1.5 小时</span>
+                        <span>🔥 难度：简单</span>
+                        <span>👥 2-4 人份</span>
+                    </div>
+                    <h2>营养又美味的家常做法</h2>
+                    <p style="margin-top: 1rem; color: #555;">
+                        胡萝卜炖羊肉是一道老少皆宜的家常菜。羊肉性温，能补血益气；胡萝卜富含胡萝卜素和维生素，具有健脾和胃、补肝明目的作用。两者同炖，不仅颜色诱人，更能起到营养互补的效果。
+                    </p>
+                </div>
+            </article>
+
+            <section class="steps-section">
+                <h2>烹饪步骤</h2>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>食材准备</h3>
+                            <p>准备羊肉 500克，胡萝卜 2根，生姜 3片，大葱 1段，八角 1个，桂皮 1小块，香叶 2片，料酒、盐适量。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>羊肉焯水</h3>
+                            <p>将羊肉切成块，冷水下锅，加入姜片和料酒，大火煮开后撇去浮沫，捞出羊肉用温水洗净沥干。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>煸炒羊肉</h3>
+                            <p>锅中放少许油，下入姜片、葱段、八角、桂皮、香叶煸炒出香味，再加入羊肉块翻炒至表面微黄。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>加水炖煮</h3>
+                            <p>倒入足量的热水（一定要热水），大火烧开后转小火慢炖约 1 小时，直到羊肉软烂。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>加入胡萝卜</h3>
+                            <p>将胡萝卜去皮切块，加入锅中，继续炖煮 20-30 分钟，直到胡萝卜软糯入味。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>调味出锅</h3>
+                            <p>最后加入适量的盐调味，撒上葱花即可出锅装盘。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nutrition-section">
+                <h3>营养价值分析</h3>
+                <p style="color: #666; margin-bottom: 1rem;">这道菜结合了羊肉的蛋白质与胡萝卜的维生素，具有以下功效：</p>
+                <div class="nutrition-grid">
+                    <div class="nutrition-item">
+                        <div class="nutrition-value">温补</div>
+                        <div class="nutrition-label">驱寒暖胃</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-value">高蛋白</div>
+                        <div class="nutrition-label">增强免疫</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-value">A族维生素</div>
+                        <div class="nutrition-label">保护视力</div>
+                    </div>
+                    <div class="nutrition-item">
+                        <div class="nutrition-value">膳食纤维</div>
+                        <div class="nutrition-label">促进消化</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <h2>常见问题 (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">胡萝卜炖羊肉有什么功效？</div>
+                    <div class="faq-answer">
+                        <p>羊肉性温，具有温补气血、暖中驱寒的功效；胡萝卜富含胡萝卜素和维生素，能健脾和胃、补肝明目。两者同食，营养互补，适合冬季畏寒怕冷、体质虚弱的人群食用。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">羊肉焯水时需要注意什么？</div>
+                    <div class="faq-answer">
+                        <p>羊肉焯水一定要冷水下锅，这样才能让羊肉内部的血水充分渗出。煮开后要及时撇去浮沫，并用温水洗净，这样炖出来的汤色更清亮，肉味更鲜美。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">吃胡萝卜炖羊肉有什么禁忌？</div>
+                    <div class="faq-answer">
+                        <p>羊肉属于热性食物，体内有实热、口舌生疮或上火的人群应适量食用。同时，羊肉不宜与醋、南瓜等食物同食，以免影响消化或降低营养价值。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>🥘 食材清单</h3>
+                <ul class="ingredient-list">
+                    <li>主料：羊肉 500g</li>
+                    <li>辅料：胡萝卜 2根</li>
+                    <li>调料：生姜 3片</li>
+                    <li>调料：大葱 1段</li>
+                    <li>调料：八角 1个</li>
+                    <li>调料：桂皮 1小块</li>
+                    <li>调料：料酒 适量</li>
+                    <li>调料：盐 适量</li>
+                </ul>
+                <div class="tips-box">
+                    <strong>💡 烹饪小贴士：</strong><br>
+                    炖羊肉时加入少许山楂或萝卜块可以帮助去腥解腻，但胡萝卜最好在羊肉快熟时再加入，以免炖烂失去口感。
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>🔥 相关推荐</h3>
+                <ul class="ingredient-list">
+                    <li><a href="#">山药羊肉汤</a> <span>→</span></li>
+                    <li><a href="#">葱爆羊肉</a> <span>→</span></li>
+                    <li><a href="#">清炖羊肉</a> <span>→</span></li>
+                    <li><a href="#">孜然羊肉</a> <span>→</span></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>家常食谱</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem;">专注于分享简单易学的家常菜谱，让烹饪变得轻松有趣。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">汤羹类</a></li>
+                    <li><a href="#">热炒类</a></li>
+                    <li><a href="#">主食类</a></li>
+                    <li><a href="#">素食类</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站介绍</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系合作</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 家常食谱网 版权所有
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
